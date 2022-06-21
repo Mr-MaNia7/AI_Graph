@@ -12,6 +12,7 @@ the following fashion:
 
 `python knapsack.py --algorithm ga --file my-file.txt
 `
+
 The input file should have content in the following style
 50
 item,weight,value
