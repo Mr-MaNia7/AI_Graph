@@ -26,7 +26,7 @@ class Content():
         f.close()
 
         # print(content) # debug line
-        print(self.indices)
+        # print(self.indices)
 
     def main(self):
         """Main method of the class."""
