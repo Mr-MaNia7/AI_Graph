@@ -41,7 +41,6 @@ class Population():
         desiredLength = len(self.population) - len(parents)
         chosenChm = {}
         while len(children) < desiredLength:
-            # Allow multiple breeding???
             father = self.population[random.randint(0, len(parents)-1)]
             mother = self.population[random.randint(0, len(parents)-1)]
 
@@ -55,11 +54,11 @@ class Population():
         return parents
 
 class Genetic():
-    def __init__(self) -> None:
+    def __init__(self, fname) -> None:
         file = f.File()
-        self.MAXWEIGHT, self.items, self.weights, self.values = file.process("Items/items_10.txt")
-        self.POPULATIONSIZE = 50
-        self.MAXGEN = 50 # maximum generation
+        self.MAXWEIGHT, self.items, self.weights, self.values = file.process(fname)
+        self.POPULATIONSIZE = 10
+        self.MAXGEN = 10 # maximum generation
   
     def fitness(self, chromosome):
         totValue = 0
@@ -88,5 +87,5 @@ class Genetic():
             countGen += 1
 
 if __name__ == "__main__":
-    g = Genetic()
+    g = Genetic("Items/items_10.txt")
     g.main()

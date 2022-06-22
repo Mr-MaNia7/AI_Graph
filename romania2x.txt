@@ -1,0 +1,102 @@
+Bahardar 11.5742 37.3614
+Dessie 11.1270 39.6363
+Kombolcha 11.0849 39.7292
+Debre-Berhan 9.6767 39.5330
+Addis-abeba 8.9806 38.7578
+Adama 8.5263 39.2583
+Harar 9.3747 42.1386
+Jimma 7.6739 36.8358
+Hawassa 7.0504 38.4955
+Gonder 12.6030 37.4521
+Shashemene 7.1973 38.6005
+Sodo 6.8528 37.7610
+Humora 14.4939 36.6366
+Welkite 8.2897 37.7822
+Tik-Giyorgis-Bete-Kiristyan 10.2294 38.1568
+Wereta 11.9297 37.7010
+Weldiya 11.8299 39.6002
+Ch'ida 7.1674 36.7878
+Nekemte 9.2584 36.6158
+Adigrat 14.3567 39.4228
+Oradea 47.0465005 21.9189438
+Zerind 46.622511 21.517419
+Arad 46.166667 21.316667
+Timisoara 45.759722 21.23
+Lugoj 45.68861 21.90306
+Mehadia 44.904114 22.364516
+Drobeta 44.636923 22.659734
+Craiova 44.333333 23.816667000000052
+Sibiu 45.792784 24.152068999999983
+Rimnicu-Vilcea 45.099675 24.369318
+Fagaras 45.8416403 24.9730954
+Pitesti 44.860556 24.867778000000044
+Giurgiu 43.9037076 25.9699265
+Bucharest 44.439663 26.096306
+Urziceni 44.7165317 26.641121
+Eforie 44.058422 28.633607
+Hirsova 44.6833333 27.9333333
+Vaslui 46.640692 27.727647
+Iasi 47.156944 27.590278000000012
+Neamt 47.2 26.3666667
+CONNECTIONS: 
+Addis-abeba Tik-Giyorgis-Bete-Kiristyan 244
+Addis-abeba Adama 64
+Tik-Giyorgis-Bete-Kiristyan Bahardar 247
+Bahardar Wereta 62
+Wereta Gonder 111
+Weldiya Dessie 119
+Dessie Kombolcha 23
+Kombolcha Debre-Berhan 234
+Debre-Berhan Addis-abeba 130
+Addis-abeba Welkite 192
+Welkite Jimma 202
+Jimma Ch'ida 83
+Adama Shashemene 196
+Shashemene Hawassa 23
+Hawassa Sodo 130
+Ch'ida Sodo 172
+Adama Harar 421
+Addis-abeba Nekemte 315
+Gonder Humora 255
+Oradea Zerind 71
+Zerind Arad 75
+Arad Sibiu 140
+Sibiu Oradea 151
+Arad Timisoara 118
+Timisoara Lugoj 111
+Lugoj Mehadia 70 
+Mehadia Drobeta 75
+Drobeta Craiova 120
+Sibiu Rimnicu-Vilcea 80
+Rimnicu-Vilcea Pitesti 97
+Pitesti Bucharest 101
+Bucharest Fagaras 211
+Fagaras Sibiu 99
+Craiova Pitesti 138 
+Craiova Rimnicu-Vilcea 146
+Bucharest Giurgiu 90
+Bucharest Urziceni 85
+Urziceni Vaslui 142
+Vaslui Iasi 92
+Iasi Neamt 87 
+Urziceni Hirsova 98
+Hirsova Eforie 86
+Addis-abeba Arad 500
+Bucharest Gonder 780
+Craiova Hawassa 900
+Kombolcha Timisoara 312
+Kombolcha Adigrat 300
+
+
+
+
+
+
+
+
+
+
+
+
+
+
