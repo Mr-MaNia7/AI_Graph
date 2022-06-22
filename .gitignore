@@ -1,6 +1,7 @@
 # custom files
 backup.py
 test.py
+Items/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

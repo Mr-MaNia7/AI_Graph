@@ -19,11 +19,11 @@ class Population():
     def mutate(self, chromosome):
         """Changes a random element of the permutation array from 0 -> 1 or from 1 -> 0.""" 
         rdm = random.randint(0, len(chromosome)-1)
-        if chromosome[rdm] == 1:
-            chromosome[rdm] = 0
-        else:
-            chromosome[rdm] = 1
-        # 1 - chromosome[r]!!!
+        # if chromosome[rdm] == 1:
+        #     chromosome[rdm] = 0
+        # else:
+        #     chromosome[rdm] = 1
+        chromosome[rdm] = 1 - chromosome[rdm]
 
     def evolve(self):
         parentLength = int(self.PARENTELIGIBILITY * len(self.population))
@@ -44,7 +44,7 @@ class Population():
         children = []
         desiredLength = len(self.population) - len(parents)
         chosenChm = {}
-        while len(children) < desiredLength :
+        while len(children) < desiredLength:
             # Allow multiple breeding???
             father = self.population[random.randint(0,len(parents)-1)]
             mother = self.population[random.randint(0,len(parents)-1)]
