@@ -1,0 +1,22 @@
+224
+item,weight,value
+couch,6,512
+shawl,1,565
+picture frame,44,621
+cup,28,1019
+mp3 player,39,712
+sand paper,36,1147
+slipper,34,1115
+shovel,32,569
+grid paper,22,1210
+CD,15,889
+button,41,702
+headphones,8,1475
+bow,10,1178
+knife,7,827
+fork,11,1384
+carrots,25,794
+cat,12,1218
+television,24,812
+scotch tape,43,987
+piano,30,1475
