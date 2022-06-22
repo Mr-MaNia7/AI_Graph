@@ -18,5 +18,5 @@ class Knapsack():
 if __name__ == "__main__":
     k = Knapsack()
 
-    # k.geneticImp()
-    k.hillClimbingImp()
+    k.geneticImp()
+    # k.hillClimbingImp()

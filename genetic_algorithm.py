@@ -6,9 +6,9 @@ class Population():
         self.size = size
         self.withPermutation = withPermutation
         self.population = [self.chromosome(itemSize) for _ in range(self.size)]
-        self.PARENTELIGIBILITY = 0.2
-        self.MUTATIONCHANCE = 0.08
-        self.PARENTCHANCE = 0.05
+        self.PARENTELIGIBILITY = 0.3
+        self.MUTATIONCHANCE = 0.1
+        self.PARENTCHANCE = 0.07
     
     def chromosome(self, itemSize):
         if self.withPermutation:
@@ -19,10 +19,6 @@ class Population():
     def mutate(self, chromosome):
         """Changes a random element of the permutation array from 0 -> 1 or from 1 -> 0.""" 
         rdm = random.randint(0, len(chromosome)-1)
-        # if chromosome[rdm] == 1:
-        #     chromosome[rdm] = 0
-        # else:
-        #     chromosome[rdm] = 1
         chromosome[rdm] = 1 - chromosome[rdm]
 
     def evolve(self):
@@ -46,14 +42,11 @@ class Population():
         chosenChm = {}
         while len(children) < desiredLength:
             # Allow multiple breeding???
-            father = self.population[random.randint(0,len(parents)-1)]
-            mother = self.population[random.randint(0,len(parents)-1)]
-            
-            # DONOT ALLOW!!!
-            # if father in chosenChm:
+            father = self.population[random.randint(0, len(parents)-1)]
+            mother = self.population[random.randint(0, len(parents)-1)]
 
             half = int(len(father)/2)
-            childChm = father[:half] + mother[half:] # from start to half from father, from half to end from mother
+            childChm = father[:half] + mother[half:] # take half from father and half from mother
             if self.MUTATIONCHANCE > random.random():
                 self.mutate(childChm)
             children.append(childChm)
@@ -66,7 +59,7 @@ class Genetic():
         file = f.File()
         self.MAXWEIGHT, self.items, self.weights, self.values = file.process("Items/items_10.txt")
         self.POPULATIONSIZE = 50
-        self.MAXGEN = 200 # maximum generation
+        self.MAXGEN = 50 # maximum generation
   
     def fitness(self, chromosome):
         totValue = 0

@@ -1,61 +1,69 @@
+import random
+from item import Item
 import file as f
-import script
 
-class Bag():
-    def __init__(self, limit, items, weights, values) -> None:
-        self.items, self.weights, self.values = items, weights, values
-        self.weight = 0
-        self.limit = limit
-        
-        self.knapsack = {}
-        self.repeatedItem = []
-        self.heu = {}
-        self.hueList = []
-        self.wvList = []
-
-        self.main()
-
-    def fillBag(self, weight, value, res):
-        self.knapsack[(weight, value)] = res
-        self.weight += weight
-    
-    def heuristic(self, item, weight, value):
-        res = value / weight
-        self.wvList.append((weight, value))
-        self.hueList.append(res)
-        self.hueList.sort(reverse = True)
-
-        self.heu = dict(zip(self.wvList, self.hueList))
-        # print(self.heu)
-
-    def removeItem(self):
-        # is repeated
-        # weight --
-        pass
-
-    def main(self):
-        for idx in range(len(self.items)):
-            i, w, v = self.items[idx], self.weights[idx], self.values[idx]
-            self.heuristic(i, w, v)
-        
-        for wv, res in list(self.heu.items()):
-            w, v = wv[0], wv[1]
-            if w + self.weight <= self.limit:
-                self.fillBag(w, v, res)
 class Hill():
     def __init__(self) -> None:
         file = f.File()
-        MAXWEIGHT, items, weights, values = file.process("Items/items_10.txt")
-        self.bag = Bag(MAXWEIGHT, items, weights, values)
-    
-    def main(self):
-        print(
-        "Items in the bag: {}".format(self.bag.knapsack.keys()), 
-        "Number of items in a bag: {}".format(len(self.bag.knapsack)), 
-        "Current weight of the bag: {}".format(self.bag.weight),
-        "Maximum weight limit: {}".format(self.bag.limit),
-        sep = "\n")
+        self.MAXWEIGHT, self.items, self.weights, self.values = file.process("Items/items_10.txt")
+        self.ITEMS = [Item(self.items[i], self.weights[i], self.values[i]) for i in range(len(self.items))]
+        self.tempItems = []
+
+    def generateList(self):
+        self.tempItems = [item for item in self.ITEMS]
+        # print(self.tempItems) #debug
+        totweight = 0
+        lst = []
+        while totweight <= self.MAXWEIGHT:
+            index = random.randint(0, len(self.tempItems)-1)
+            p = self.tempItems.pop(index)
+            totweight += p.weight
+            lst.append(p)
+        return lst
+
+    def huristicValue(self, lst):
+        totalValue = 0
+        for item in lst:
+            totalValue += item.value
+        return totalValue
+
+    def hillClimbing(self):
+        previous_list = self.generateList()
+        previous_value = self.huristicValue(previous_list)
+        # print(previous_list, previous_value) # debug
+        for i in range(10):
+            current_list = self.generateList()
+            current_value = self.huristicValue(current_list)
+            if previous_value < current_value:
+                previous_list = current_list
+                previous_value = current_value
+            else:
+                return previous_list, previous_value
+
+    def annealing(self):
+        previous_list = self.generateList()
+        previous_value = self.huristicValue(previous_list)
+        change_in_value = 0
+        value = []
+        # print(previous_list, previous_value) # debug
+        for i in range(10):
+            current_list = self.generateList()
+            current_value = self.huristicValue(current_list)
+            if previous_value >= current_value:
+                if len(value) == 0:
+                    change_in_value = previous_value - current_value
+                    value.append(change_in_value)
+                else:
+                    change_in_value = previous_value - current_value
+                    if value[0] >= change_in_value:
+                        value[0] = change_in_value
+                    else:
+                        return previous_list, previous_value
+            elif previous_value < current_value:
+                previous_list = current_list
+                previous_value = current_value
+        return previous_list, previous_value
 
 if __name__ == "__main__":
     hill = Hill()
-    hill.main()
+    print(hill.annealing())
