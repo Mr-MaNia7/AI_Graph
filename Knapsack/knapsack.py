@@ -17,7 +17,7 @@ class Knapsack():
         h.main()
     
     def simmulatedAnnealingImp(self):
-        s = ann.Annealing()
+        s = ann.Annealing("Items/")
         s.main()
 
 if __name__ == "__main__":

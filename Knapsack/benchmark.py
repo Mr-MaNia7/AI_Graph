@@ -9,9 +9,9 @@ from genetic_algorithm import Genetic
 from hill_climbing_algorithm import Hill
 from simmulated_annealing import Annealing
 
-hill = Hill("Items/items_10.txt")
-g = Genetic("Items/items_10.txt")
-s = Annealing("Items/items_10.txt")
+hill = Hill("Items/items_20.txt")
+g = Genetic("Items/items_20.txt")
+s = Annealing("Items/items_20.txt")
 
 annealing = timeit.timeit(stmt = s.main, number = 1)
 hill_climbing = timeit.timeit(stmt = hill.main,number = 1)
@@ -27,6 +27,6 @@ plt.bar(search_mechanism,average_time, color ='maroon',
         width = 0.4)
 
 plt.xlabel("")
-plt.ylabel("No. of students enrolled")
+plt.ylabel("Time Complexity")
 plt.title("")
 plt.show()
