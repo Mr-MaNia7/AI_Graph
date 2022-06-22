@@ -42,17 +42,20 @@ class Bag():
             w, v = wv[0], wv[1]
             if w + self.weight <= self.limit:
                 self.fillBag(w, v, res)
-
+class Hill():
+    def __init__(self) -> None:
+        file = f.File()
+        MAXWEIGHT, items, weights, values = file.process("Items/items_10.txt")
+        self.bag = Bag(MAXWEIGHT, items, weights, values)
+    
+    def main(self):
+        print(
+        "Items in the bag: {}".format(self.bag.knapsack.keys()), 
+        "Number of items in a bag: {}".format(len(self.bag.knapsack)), 
+        "Current weight of the bag: {}".format(self.bag.weight),
+        "Maximum weight limit: {}".format(self.bag.limit),
+        sep = "\n")
 
 if __name__ == "__main__":
-    content = script.Content()
-    content.main()
-    file = f.File()
-    MAXWEIGHT, items, weights, values = file.process("Items/items_10.txt")
-    bag = Bag(MAXWEIGHT, items, weights, values)
-    print(
-    "Items in the bag: {}".format(bag.knapsack), 
-    "Number of items in a bag: {}".format(len(bag.knapsack)), 
-    "Weight of the bag: {}".format(bag.weight),
-    "Maximum Weight: {}".format(bag.limit),
-    sep = "\n")
+    hill = Hill()
+    hill.main()

@@ -1,17 +1,17 @@
-177
+150
 item,weight,value
-couch,6,512
-shawl,1,565
-picture frame,44,621
-cup,28,1019
-mp3 player,39,712
-sand paper,36,1147
-slipper,34,1115
-shovel,32,569
-grid paper,22,1210
-CD,15,889
-button,41,702
-headphones,8,1475
-bow,10,1178
-knife,7,827
-fork,11,1384
+couch,1,771
+shawl,21,852
+picture frame,27,991
+cup,6,896
+mp3 player,18,841
+sand paper,39,757
+slipper,30,831
+shovel,35,1443
+grid paper,41,710
+CD,17,1064
+button,10,1468
+headphones,31,1462
+bow,19,1138
+knife,9,1392
+fork,4,1133

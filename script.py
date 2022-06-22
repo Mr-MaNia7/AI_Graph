@@ -13,7 +13,7 @@ class Content():
     
     def generateContent(self, fileName, itemNum):
         """A method for generating and writing content."""
-        self.maxWeight = str(random.randint(70, 400)) + '\n'
+        self.maxWeight = str(random.randint(10, 20) * itemNum) + '\n'
         content = [self.maxWeight, self.header]
         
         for idx in range(itemNum):
