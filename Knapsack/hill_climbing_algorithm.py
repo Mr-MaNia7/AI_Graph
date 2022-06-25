@@ -1,6 +1,6 @@
 import random
-from item import Item
-import file as f
+from Knapsack.item import Item
+import Knapsack.file as f
 
 class Hill():
     def __init__(self, fname) -> None:
@@ -38,6 +38,7 @@ class Hill():
                 previous_list = current_list
                 previous_value = current_value
             else:
+                print([item.name for item in previous_list], previous_value, sep = "\n")
                 return previous_list, previous_value
 
 if __name__ == "__main__":

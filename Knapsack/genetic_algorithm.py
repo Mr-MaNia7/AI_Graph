@@ -1,5 +1,5 @@
 import random
-import file as f
+import Knapsack.file as f
 
 class Population():
     def __init__(self, size, itemSize, withPermutation = True) -> None:
@@ -87,5 +87,5 @@ class Genetic():
             countGen += 1
 
 if __name__ == "__main__":
-    g = Genetic("Items/items_10.txt")
+    g = Genetic("items_10.txt")
     g.main()

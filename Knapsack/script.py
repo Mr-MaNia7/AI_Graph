@@ -30,15 +30,15 @@ class Content():
 
     def main(self):
         """Main method of the class."""
-        f = open("Items/random_items.txt")
+        f = open("random_items.txt")
         lines = f.readlines()
         for line in lines:
             self.items.append(line.rstrip() + ',')
         f.close()
 
-        self.generateContent("Items/items_10.txt", 10)
-        self.generateContent("Items/items_15.txt", 15)
-        self.generateContent("Items/items_20.txt", 20)
+        self.generateContent("items_10.txt", 10)
+        self.generateContent("items_15.txt", 15)
+        self.generateContent("items_20.txt", 20)
 
 if __name__ == "__main__":
     content = Content()

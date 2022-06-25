@@ -1,6 +1,6 @@
 import random
-from item import Item
-import file as f
+from Knapsack.item import Item
+import Knapsack.file as f
 
 class Annealing():
     def __init__(self, fname) -> None:
@@ -45,10 +45,12 @@ class Annealing():
                     if value[0] >= change_in_value:
                         value[0] = change_in_value
                     else:
+                        print([item.name for item in previous_list], previous_value, sep = "\n")
                         return previous_list, previous_value
             elif previous_value < current_value:
                 previous_list = current_list
                 previous_value = current_value
+        print([item.name for item in previous_list], previous_value, sep = "\n")
         return previous_list, previous_value
 
 if __name__ == "__main__":

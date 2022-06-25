@@ -33,5 +33,5 @@ class File():
 
 if __name__ == "__main__":
     file = File()
-    file.process("Items/items_10.txt")
+    file.process("items_10.txt")
     file.displayResult()

@@ -1,0 +1,12 @@
+160
+item,weight,value
+couch,44,1100
+shawl,6,606
+picture frame,31,1243
+cup,13,1062
+mp3 player,39,549
+sand paper,19,558
+slipper,9,905
+shovel,35,1196
+grid paper,1,713
+CD,26,783

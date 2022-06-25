@@ -1,0 +1,45 @@
+Oradea 47.0465005 21.9189438
+Zerind 46.622511 21.517419
+Arad 46.166667 21.316667
+Timisoara 45.759722 21.23
+Lugoj 45.68861 21.90306
+Mehadia 44.904114 22.364516
+Drobeta 44.636923 22.659734
+Craiova 44.333333 23.816667000000052
+Sibiu 45.792784 24.152068999999983
+Rimnicu-Vilcea 45.099675 24.369318
+Fagaras 45.8416403 24.9730954
+Pitesti 44.860556 24.867778000000044
+Bucharest 44.439663 26.096306
+Urziceni 44.7165317 26.641121
+Hirsova 44.6833333 27.9333333
+Vaslui 46.640692 27.727647
+CONNECTIONS: 
+Oradea Zerind 71
+Zerind Arad 75
+Arad Sibiu 140
+Sibiu Oradea 151
+Arad Timisoara 118
+Timisoara Lugoj 111
+Lugoj Mehadia 70 
+Mehadia Drobeta 75
+Drobeta Craiova 120
+Sibiu Rimnicu-Vilcea 80
+Rimnicu-Vilcea Pitesti 97
+Pitesti Bucharest 101
+Bucharest Fagaras 211
+Fagaras Sibiu 99
+Craiova Pitesti 138 
+Craiova Rimnicu-Vilcea 146
+Bucharest Urziceni 85
+Urziceni Vaslui 142
+Urziceni Hirsova 98
+
+
+
+
+
+
+
+
+
